@@ -10,7 +10,7 @@ import (
 	"github.com/abh1SHAKE/go-crud/pkg/repository"
 )
 
-func GetBook(w http.ResponseWriter, r *http.Request) {
+func GetBooks(w http.ResponseWriter, r *http.Request) {
 	books, err := repository.GetAllBooks()
 	if err != nil {
 		http.Error(w, "Failed to fetch books", http.StatusInternalServerError)
